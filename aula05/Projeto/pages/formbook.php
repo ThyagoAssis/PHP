@@ -1,3 +1,35 @@
+<?php  
+
+    //Testa se foi digitado algo no formulário
+    if(isset($_POST['txtTitle'])  &&  isset( $_POST['txtISBN'])  &&  isset($_POST['txtANO'])  &&  isset( $_POST['txtPagina'])){
+
+         //Chama o arquivo de conexão com o Banco de dados
+        require_once('conexao.php');
+
+        //Criar as variáveis
+        $titulo = $_POST['txtTitle'];
+        $isbn = $_POST['txtISBN'];
+        $ano = $_POST['txtANO'];
+        $paginas = $_POST['txtPagina'];
+
+        //Inserção no Banco de dados
+
+        $control = $conecta->prepare("INSERT INTO tb_livro(titulo, isbn, ano, qtdPagina) VALUES (:TITULO, :ISBN, :ANO, :PAGINA)");
+        $control->bindParam("TITULO", $titulo);
+        $control->bindParam("ISBN", $isbn);
+        $control->bindParam("ANO", $ano);
+        $control->bindParam("PAGINA", $paginas);
+
+        $control->execute();
+
+    }
+
+
+    
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +60,7 @@
 
         <div class="wrapper bg-light mt-5 ">
             <h2 class="mb-3 mt-3 text-center">Cadastro de Livros</h2>
-            <form action="">
+            <form action="#" method="POST">
                 <div class="form-row">
                     <div class="col form-group">
                         <label for="id_title">Título:</label>
@@ -54,7 +86,7 @@
                     </div>
                     <div class="col">
                         <label for="id_ano">ANO:</label>
-                        <input class="form-control" type="text" placeholder="Ano" name="txtANO" id="id_ano">
+                        <input class="form-control" type="date" placeholder="Ano" name="txtANO" id="id_ano">
                     </div>
                     <div class="col">
                     <label for="id_qtdpag">Páginas:</label>

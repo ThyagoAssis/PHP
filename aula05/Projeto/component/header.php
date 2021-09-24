@@ -1,5 +1,4 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
-
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a href="../pages/home.php">
@@ -18,8 +17,7 @@
                     </a>
                     <div class="dropdown-menu" style="background-color: #dfe6e9; " aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="../pages/formbook.php">Cadastrar</a>
-                        <a class="dropdown-item" href="">Visualizar</a>
-                        <a class="dropdown-item" href="">Editar</a>
+                        <a class="dropdown-item" href="../pages/viewbook.php">Visualizar</a>                        
                     </div>
                 </li>
 
@@ -29,8 +27,7 @@
                     </a>
                     <div class="dropdown-menu" style="background-color: #dfe6e9; " aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="../pages/formautor.php">Cadastrar</a>
-                        <a class="dropdown-item" href="#">Visualizar</a>
-                        <a class="dropdown-item" href="#">Editar</a>
+                        <a class="dropdown-item" href="#">Visualizar</a>                        
                     </div>
                 </li>
 
@@ -40,8 +37,7 @@
                     </a>
                     <div class="dropdown-menu" style="background-color: #dfe6e9; " aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="../pages/formeditora.php">Cadastrar</a>
-                        <a class="dropdown-item" href="#">Visualizar</a>
-                        <a class="dropdown-item" href="#">Editar</a>
+                        <a class="dropdown-item" href="#">Visualizar</a>                        
                     </div>
                 </li>
             </ul>
