@@ -36,15 +36,21 @@
                 foreach($resultado as $rows){
                    echo ("
                             <div class='col-3'>
-                                <div class='card mt-3 mb-3' style='width: 15rem; font-size: 10px; box-shadow: 0 0 1em;'>
-                                    <div class='card-header' style='font-size: 15px;'>
+                                <div class='card mt-3 mb-3' style='width: 15rem; box-shadow: 0 0 1em;'>
+                                    <div class='card-header' style='font-size: 16px; font-bold: bold;'>
                                         " . $rows['titulo'] . "
                                     </div>
-                                    <div class='card-body'>                                       
+                                    <div class='card-body ' style='font-size: 13px;'>                                       
                                         <p class='card-text'> <strong> ISBN: </strong> " . $rows['isbn'] . " </p>
                                         <p class='card-text'> <strong> Ano publicação: </strong> " . $rows['ano'] . " </p>
                                         <p class='card-text'> <strong> Paginas: </strong> " . $rows['qtdPagina'] . " </p>
-                                        <a href='#' class='btn btn-primary'>Visitar</a>
+
+                                        <!--Botão excluir-->
+                                        <a href='bookdel.php?id=" . $rows['idLivro'] . "' class='btn btn-danger btn-sm'>Excluir</a>
+
+
+                                        <!--Botão editar-->
+                                        <a href='formeditbook.php?id=" . $rows['idLivro'] . "' class='btn btn-success btn-sm'>Editar</a>
                                     </div>
                                 </div>
                             
